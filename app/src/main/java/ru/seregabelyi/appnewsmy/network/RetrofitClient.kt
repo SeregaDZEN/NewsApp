@@ -3,8 +3,8 @@ package ru.seregabelyi.appnewsmy.network
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitClient {
-    private const val BASE_URL = "https://newsapi.org/"
+object GNewsRetrofitClient {
+    private const val BASE_URL = "https://gnews.io/api/v4/"
 
     val instance: Retrofit by lazy {
         Retrofit.Builder()
@@ -13,7 +13,7 @@ object RetrofitClient {
             .build()
     }
 
-    val apiService: NewsApiService by lazy {
-        instance.create(NewsApiService::class.java)
+    val apiService: GNewsApiService by lazy {
+        instance.create(GNewsApiService::class.java)
     }
 }

@@ -27,8 +27,11 @@ android {
                 properties.load(stream)
             }
         }
+        val gNewsApiKey = properties.getProperty("GNEWS_API_KEY") ?: ""
+        buildConfigField("String", "GNEWS_API_KEY", "\"$gNewsApiKey\"")
         val newsApiKey = properties.getProperty("NEWS_API_KEY") ?: ""
         buildConfigField("String", "NEWS_API_KEY", "\"$newsApiKey\"")
+
 
     }
 

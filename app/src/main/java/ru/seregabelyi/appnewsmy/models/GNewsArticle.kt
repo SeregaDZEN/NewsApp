@@ -1,11 +1,13 @@
 package ru.seregabelyi.appnewsmy.models
 
-data class Article(
-    val source: Source,
-    val author: String?,
+
+
+data class GNewsArticle(
     val title: String,
     val description: String?,
+    val content: String?,
     val url: String,
-    val urlToImage: String?,
+    val image: String?,  // ← Картинка тут!
     val publishedAt: String,
+    val source: GNewsSource
 )
